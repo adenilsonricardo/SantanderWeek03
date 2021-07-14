@@ -1,4 +1,3 @@
 package com.example.santanderweek03.data
 
-class Cliente {
-}
+data class Cliente (val nome: String)
