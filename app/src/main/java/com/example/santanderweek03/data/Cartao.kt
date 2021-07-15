@@ -1,3 +1,3 @@
 package com.example.santanderweek03.data
 
-data class Cartao (val Cartao: String)
+data class Cartao (val numeroCartao: String)

@@ -8,7 +8,7 @@ class FakeData {
 
     fun getLocalData() : Conta {
         val cliente = Cliente("Ricardo")
-        val cartao: Cartao ("123456789")
+        val cartao = Cartao("123456789")
         return Conta(
             "123456-7",
             "1234-5",
@@ -17,10 +17,5 @@ class FakeData {
             cliente,
             cartao
         );
-
     }
-
-
-
-
 }
