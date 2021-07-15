@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.example.santanderweek03.data.Conta
 import com.example.santanderweek03.data.local.FakeData
 
-class MainViewModel :ViewModel(){
+class MainViewModel : ViewModel() {
     private val mutableLiveData: MutableLiveData<Conta> = MutableLiveData()
 
     fun buscarContaCliente() : LiveData<Conta> {
