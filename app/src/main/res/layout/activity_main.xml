@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity"
     tools:ignore="ExtraText">
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -16,7 +15,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-
         <TextView
         android:text="Santander"
         android:textAlignment="center"
@@ -32,7 +30,6 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:gravity="center_horizontal" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
@@ -42,7 +39,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
-
     <TextView
         android:id="@+id/tv_usuário"
         android:layout_width="wrap_content"
@@ -52,7 +48,6 @@
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
-
     <TextView
         android:id="@+id/tv_agência"
         android:layout_width="wrap_content"
@@ -63,7 +58,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/tv_usuário"
         app:layout_constraintTop_toBottomOf="@id/tv_usuário" />
-
     <TextView
         android:id="@+id/tv_conta_corrente"
         android:layout_width="wrap_content"
@@ -74,7 +68,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/tv_agência"
         app:layout_constraintTop_toTopOf="@id/tv_agência" />
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/mcv_card_conta"
         android:layout_width="0dp"
@@ -85,11 +78,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_agência">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
             <ImageView
                 android:id="@+id/iv_saldo"
                 android:layout_width="wrap_content"
@@ -98,7 +89,6 @@
                 android:src="@drawable/ic_refresh_black_24dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
             <TextView
                 android:id="@+id/tv_saldo_disponivel"
                 android:layout_width="wrap_content"
@@ -109,7 +99,6 @@
                 app:layout_constraintLeft_toRightOf="@id/iv_saldo"
                 app:layout_constraintTop_toBottomOf="@id/iv_saldo"
                 app:layout_constraintTop_toTopOf="@id/iv_saldo" />
-
             <ImageView
                 android:id="@+id/iv_up"
                 android:layout_width="wrap_content"
@@ -118,7 +107,6 @@
                 android:src="@drawable/ic_expand_less_black_24dp"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
             <TextView
                 android:id="@+id/tv_saldo"
                 android:layout_width="wrap_content"
@@ -129,7 +117,6 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/iv_saldo"
                 app:layout_constraintTop_toBottomOf="@id/tv_saldo_disponivel" />
-
             <TextView
                 android:id="@+id/tv_saldo_limite"
                 android:layout_width="wrap_content"
@@ -138,7 +125,6 @@
                 android:text="@string/txt_saldo_limite"
                 app:layout_constraintStart_toStartOf="@id/tv_saldo"
                 app:layout_constraintTop_toBottomOf="@id/tv_saldo" />
-
             <TextView
                 android:id="@+id/tv_limite"
                 android:layout_width="wrap_content"
@@ -147,7 +133,6 @@
                 android:text="R$ 1.111,11"
                 app:layout_constraintStart_toEndOf="@id/tv_saldo_limite"
                 app:layout_constraintTop_toTopOf="@id/tv_saldo_limite" />
-
             <View
                 android:id="@+id/v_divider"
                 android:layout_width="match_parent"
@@ -155,7 +140,6 @@
                 android:layout_margin="16dp"
                 android:background="@android:color/darker_gray"
                 app:layout_constraintTop_toBottomOf="@id/tv_saldo_limite" />
-
             <TextView
                 android:id="@+id/tv_ver_extrato"
                 android:layout_width="wrap_content"
@@ -166,11 +150,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/v_divider" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </com.google.android.material.card.MaterialCardView>
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/mcv_pagar"
         android:layout_width="100dp"
@@ -178,7 +159,6 @@
         android:layout_margin="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/mcv_card_conta">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -193,7 +173,6 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
             <TextView
                 android:id="@+id/tv_pagar"
                 android:layout_width="wrap_content"
@@ -203,10 +182,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_pagar" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/mcv_transferir"
         android:layout_width="100dp"
@@ -214,12 +191,9 @@
         android:layout_margin="16dp"
         app:layout_constraintStart_toEndOf="@id/mcv_pagar"
         app:layout_constraintTop_toBottomOf="@id/mcv_card_conta">
-
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
             <ImageView
                 android:id="@+id/iv_transferir"
                 android:layout_width="wrap_content"
@@ -241,9 +215,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_transferir" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </com.google.android.material.card.MaterialCardView>
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/mcv_recarregar"
         android:layout_width="100dp"
@@ -251,11 +223,9 @@
         android:layout_margin="16dp"
         app:layout_constraintStart_toEndOf="@id/mcv_transferir"
         app:layout_constraintTop_toBottomOf="@id/mcv_card_conta">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
             <ImageView
                 android:id="@+id/iv_recarregar"
                 android:layout_width="wrap_content"
@@ -277,9 +247,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_recarregar" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </com.google.android.material.card.MaterialCardView>
-
     <ImageView
         android:id="@+id/iv_cartao_final_content"
         android:layout_width="0dp"
@@ -290,7 +258,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/mcv_pagar" />
-
     <TextView
         android:id="@+id/tv_cartao_final"
         android:layout_width="wrap_content"
@@ -301,7 +268,6 @@
         app:layout_constraintBottom_toBottomOf="@id/iv_cartao_final_content"
         app:layout_constraintStart_toStartOf="@id/iv_cartao_final_content"
         app:layout_constraintTop_toTopOf="@id/iv_cartao_final_content" />
-
     <TextView
         android:id="@+id/tv_cartao_final_value"
         android:layout_width="wrap_content"
@@ -312,7 +278,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/tv_cartao_final"
         app:layout_constraintTop_toTopOf="@id/tv_cartao_final" />
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -321,5 +286,4 @@
         app:layout_constraintBottom_toBottomOf="@id/iv_cartao_final_content"
         app:layout_constraintEnd_toEndOf="@id/iv_cartao_final_content"
         app:layout_constraintTop_toTopOf="@id/iv_cartao_final_content" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

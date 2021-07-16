@@ -8,14 +8,10 @@ import com.example.santanderweek03.data.local.FakeData
 
 class MainViewModel : ViewModel() {
     private val mutableLiveData: MutableLiveData<Conta> = MutableLiveData()
-
     fun buscarContaCliente() : LiveData<Conta> {
         mutableLiveData.value = FakeData().getLocalData()
 
 
         return mutableLiveData
     }
-
-
-
 }
