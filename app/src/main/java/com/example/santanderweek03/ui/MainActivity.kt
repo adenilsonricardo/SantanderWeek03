@@ -9,37 +9,38 @@ import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.santanderweek03.R
+import com.example.santanderweek03.data.Conta
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
-
-
     private lateinit var mainViewModel: MainViewModel
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        buscarContaCliente()
+    }
+    private fun buscarContaCliente(){
         mainViewModel.buscarContaCliente().observe(this, Observer { result ->
-            findViewById<TextView>(R.id.tv_agência).text = result.agencia
-            findViewById<TextView>(R.id.tv_conta_corrente).text = result.numero
-            findViewById<TextView>(R.id.tv_saldo).text = result.saldo
-            findViewById<TextView>(R.id.tv_limite).text = result.limite
-            findViewById<TextView>(R.id.tv_usuário).text = result.cliente.nome
-            findViewById<TextView>(R.id.tv_cartao_final_value).text = result.cartao.numeroCartao
-
+            bindOnView(result)
         })
     }
-
+    private fun bindOnView(conta : Conta) {
+        findViewById<TextView>(R.id.tv_agência).text = conta.agencia
+        findViewById<TextView>(R.id.tv_conta_corrente).text = conta.numero
+        findViewById<TextView>(R.id.tv_saldo).text = conta.saldo
+        findViewById<TextView>(R.id.tv_limite).text = conta.limite
+        findViewById<TextView>(R.id.tv_usuário).text = conta.cliente.nome
+        findViewById<TextView>(R.id.tv_cartao_final_value).text = conta.cartao.numeroCartao
+    }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflate = menuInflater
         inflate.inflate(R.menu.main_menu, menu)
         return true
 
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId){
             R.id.item_1 ->{
@@ -48,7 +49,5 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
-
     }
-
 }
